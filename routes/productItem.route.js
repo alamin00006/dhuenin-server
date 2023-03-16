@@ -4,7 +4,7 @@ const productItemController = require("../controllers/productItem.controller");
 
 router
   .route("/")
-  //   .get(productItemController.getHotels)
+  .get(productItemController.getItmes)
   .post(productItemController.createProduct);
 
 // router.route("/:id").patch(productItemController.updateHotel);

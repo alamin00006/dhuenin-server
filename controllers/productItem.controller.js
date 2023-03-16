@@ -20,3 +20,21 @@ exports.createProduct = async (req, res) => {
     });
   }
 };
+
+exports.getItmes = async (req, res, next) => {
+  try {
+    const items = await ProductItem.find({});
+
+    res.status(200).json({
+      status: "success",
+      message: "data get Success",
+      data: items,
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: "failed",
+      message: "data not found",
+      error: error.message,
+    });
+  }
+};
