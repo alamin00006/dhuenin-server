@@ -13,7 +13,7 @@ const options = {
 };
 // const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@allassistant.23iq4ty.mongodb.net/allassistant?retryWrites=true&w=majority`;
 
-const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.f0fljak.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.f0fljak.mongodb.net/dhuenin?retryWrites=true&w=majority`;
 
 // const uri = "mongodb://localhost:27017/dhuenin";
 
