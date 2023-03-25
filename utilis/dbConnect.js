@@ -7,18 +7,18 @@ const options = {
   serverSelectionTimeoutMS: 5000,
   autoIndex: true,
   maxPoolSize: 10,
-  serverSelectionTimeoutMS: 5000,
   socketTimeoutMS: 45000,
   family: 4,
 };
-// const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@allassistant.23iq4ty.mongodb.net/allassistant?retryWrites=true&w=majority`;
 
 const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.f0fljak.mongodb.net/dhuenin?retryWrites=true&w=majority`;
 
 // const uri = "mongodb://localhost:27017/dhuenin";
 
-const connectWithDB = () => {
-  mongoose
+
+
+const connectWithDB = async() => {
+  await mongoose
     .connect(uri, options)
     .then(() => {
       console.log("database connection succefully");

@@ -18,6 +18,24 @@ exports.getAllOrders = async (req, res, next) => {
   }
 };
 
+exports.getOrderDetails = async (req,res)=>{
+  try{
+    const id = req.params.id;
+  const order = await Order.findById(id)
+     res.status(200).json({
+      status:'success',
+      message:'data get Success',
+      data:order
+     })
+  }catch(error){
+    res.status(400).json({
+      status:'failed',
+      message:'data not found',
+      error:error.message
+    })
+  }
+}
+
 exports.createOrder = async (req, res) => {
   try {
     const order = new Order(req.body);

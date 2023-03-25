@@ -5,12 +5,10 @@ const productItemController = require("../controllers/productItem.controller");
 router
   .route("/")
   .get(productItemController.getItmes)
-  .post(productItemController.createProduct);
+  .post(productItemController.createProduct)
 
-// router.route("/:id").patch(productItemController.updateHotel);
-// router
-//   .route("/:id")
-//   .get(productItemController.getHotelDetails)
-//   .delete(productItemController.deleteHotel);
+router.route("/:id").patch(productItemController.updateItem)
+
+  .delete(productItemController.deleteItem);
 
 module.exports = router;

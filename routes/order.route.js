@@ -6,5 +6,5 @@ router
   .post(orderController.createOrder)
   .get(orderController.getAllOrders);
 router.route("/:id").delete(orderController.deleteOrder);
-
+router.route('/orderDetails/:id').get(orderController.getOrderDetails)
 module.exports = router;
